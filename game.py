@@ -27,7 +27,7 @@ try:
     mushroom_img = pygame.image.load("mushroom.png").convert_alpha()
     mario_img    = pygame.transform.scale(mario_img, (CELL_SIZE, CELL_SIZE))
     mushroom_img = pygame.transform.scale(mushroom_img, (CELL_SIZE, CELL_SIZE))
-except pygame.error:
+except (pygame.error, FileNotFoundError):
     # fallback if images missing
     mario_img    = pygame.Surface((CELL_SIZE, CELL_SIZE))
     mushroom_img = pygame.Surface((CELL_SIZE, CELL_SIZE))
