@@ -1,3 +1,5 @@
 Initial version of Mario-themed Snake game using pygame.
 
 Added exception handling for missing sprite files to prevent crash when images are absent.
+
+Enhanced game-over logic to keep the window open until the player closes it, allowing the Game Over screen to persist rather than exiting automatically.

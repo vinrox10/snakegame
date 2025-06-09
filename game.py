@@ -124,5 +124,13 @@ font_big = pygame.font.SysFont(None, 48)
 go_surf = font_big.render("Game Over", True, (255,0,0))
 screen.blit(go_surf, (SCREEN_WIDTH//2 - go_surf.get_width()//2, SCREEN_HEIGHT//2))
 pygame.display.flip()
-pygame.time.wait(2000)
+
+# Wait until player closes the window
+waiting = True
+while waiting:
+    for evt in pygame.event.get():
+        if evt.type == pygame.QUIT:
+            waiting = False
+    clock.tick(5)
+
 pygame.quit()
