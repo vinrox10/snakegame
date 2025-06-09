@@ -1,1 +1,3 @@
 Initial version of Mario-themed Snake game using pygame.
+
+Added exception handling for missing sprite files to prevent crash when images are absent.
